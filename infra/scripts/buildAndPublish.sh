@@ -8,7 +8,7 @@ TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
 echo "$TARGET_DIR"
 
 # Remove the existing build
-rm -rf "$SOURCE_DIR/build"
+# rm -rf "$SOURCE_DIR/build"
 
 # Install node modules and creat new build
 (cd "$SOURCE_DIR" && npm ci && npm run build)
