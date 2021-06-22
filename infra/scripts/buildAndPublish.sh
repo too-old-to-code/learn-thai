@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Set some variables
-SOURCE_DIR="../frontend"
+SOURCE_DIR="../../frontend"
 GIT_COMMIT_HASH='git rev-parse --short HEAD'
 BUCKET_NAME='learn-thai'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
