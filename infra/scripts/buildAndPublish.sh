@@ -9,7 +9,7 @@ BUCKET_NAME='learn-thai'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
 echo "$TARGET_DIR"
 echo 'why oh why oh why'
-ls | echo
+echo $(ls)
 # Remove the existing build
 # rm -rf "$SOURCE_DIR/build"
 
