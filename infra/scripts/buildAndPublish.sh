@@ -18,7 +18,7 @@ echo =================================
 echo $(ls)
 
 # Install node modules and creat new build
-(npm ci && npm run build)
+(npm i && npm run build)
 
 # Copy the build application to the deployed S3 bucket
 aws s3 sync "build" "s3://$TARGET_DIR/"
