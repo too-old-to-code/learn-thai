@@ -3,7 +3,7 @@
 set -e
 
 # Set some variables
-SOURCE_DIR="."
+# SOURCE_DIR="."
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
 BUCKET_NAME='learn-thaistuff'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
@@ -13,7 +13,7 @@ echo $(ls)
 # Remove the existing build
 # rm -rf "$SOURCE_DIR/build"
 
-cd "$SOURCE_DIR"
+# cd "$SOURCE_DIR"
 echo =================================
 echo $(ls)
 
@@ -21,4 +21,4 @@ echo $(ls)
 (npm ci && npm run build)
 
 # Copy the build application to the deployed S3 bucket
-aws s3 sync "$SOURCE_DIR/build" "s3://$TARGET_DIR/"
+aws s3 sync "build" "s3://$TARGET_DIR/"
