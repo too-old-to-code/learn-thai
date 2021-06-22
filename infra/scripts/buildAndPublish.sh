@@ -5,7 +5,7 @@ set -e
 # Set some variables
 SOURCE_DIR="./frontend"
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
-BUCKET_NAME='learn-thai'
+BUCKET_NAME='learn-thaistuff'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
 echo "$TARGET_DIR"
 echo 'why oh why oh why'
