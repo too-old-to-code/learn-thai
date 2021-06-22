@@ -13,8 +13,12 @@ echo $(ls)
 # Remove the existing build
 # rm -rf "$SOURCE_DIR/build"
 
+cd "$SOURCE_DIR"
+echo =================================
+echo $(ls)
+
 # Install node modules and creat new build
-(cd "$SOURCE_DIR" && npm ci && npm run build)
+(npm ci && npm run build)
 
 # Copy the build application to the deployed S3 bucket
 aws s3 sync "$SOURCE_DIR/build" "s3://$TARGET_DIR/"
