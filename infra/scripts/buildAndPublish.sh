@@ -3,7 +3,7 @@
 set -e
 
 # Set some variables
-SOURCE_DIR="./frontend"
+SOURCE_DIR="."
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
 BUCKET_NAME='learn-thaistuff'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
