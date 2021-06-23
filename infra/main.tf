@@ -5,13 +5,13 @@ provider "aws" {
 }
 
 # Set a variable for the name of our bucket
-variable "bucket_name" {
+variable "branch_name" {
   default = "learn-the-thai-alphabet"
 }
 
 # Create a bucket, complete with bucket policy
 resource "aws_s3_bucket" "react_bucket" {
-  bucket = "${var.bucket_name}"
+  bucket = "${var.branch_name}"
   acl    = "public-read"
   force_destroy = true
 
