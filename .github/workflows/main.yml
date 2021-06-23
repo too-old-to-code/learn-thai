@@ -36,4 +36,4 @@ jobs:
           aws-region: eu-west-2
       - name: Build and publish
         # working-directory: frontend
-        run: ../infra/scripts/buildAndPublish.sh
+        run: ./infra/scripts/buildAndPublish.sh
