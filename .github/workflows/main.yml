@@ -23,9 +23,9 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: "eu-west-2"
+      BRANCH_NAME: ${{ github.head_ref }}
     steps:
       - uses: actions/checkout@v2
-      - run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_ENV
       - run: terraform init
       - run: terraform workspace select ${{ env.BRANCH_NAME }} || terraform workspace new ${{ env.BRANCH_NAME }}
       - run: terraform apply -var="branch_name=${{ env.BRANCH_NAME }}" -auto-approve
