@@ -4,8 +4,8 @@
 SOURCE_DIR="./client"
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
 BUCKET_NAME='learn-thai-12345'
-# TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
-TARGET_DIR="$BUCKET_NAME"
+TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
+# TARGET_DIR="$BUCKET_NAME"
 echo "$TARGET_DIR"
 
 # Remove the existing build
@@ -17,4 +17,4 @@ rm -rf "$SOURCE_DIR/build"
 echo $(ls)
 
 # Copy the build application to the deployed S3 bucket
-aws s3 sync "$SOURCE_DIR/build" "s3://$TARGET_DIR/"
+aws s3 sync "$SOURCE_DIR/build" "s3://$TARGET_DIR/" --delete

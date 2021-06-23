@@ -6,7 +6,7 @@ provider "aws" {
 
 # Set a variable for the name of our bucket
 variable "bucket_name" {
-  default = "learn-thai"
+  default = "learn-the-thai-alphabet"
 }
 
 # Create a bucket, complete with bucket policy
@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "react_bucket" {
         "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${var.bucket_name}/*",
+      "Resource": "arn:aws:s3:::${var.branch_name}/*",
       "Principal": "*"
     }
   ]
