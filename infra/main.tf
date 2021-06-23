@@ -48,6 +48,6 @@ output "website_endpoint" {
 }
 
 output "bucket_name" {
-  value = "${var.bucket_name}"
+  value = "${var.branch_name}"
 }
 
