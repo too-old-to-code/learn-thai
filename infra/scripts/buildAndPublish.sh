@@ -4,7 +4,8 @@
 SOURCE_DIR="./client"
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
 BUCKET_NAME='learn-thai-12345'
-TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
+# TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
+TARGET_DIR="$BUCKET_NAME"
 echo "$TARGET_DIR"
 
 # Remove the existing build
