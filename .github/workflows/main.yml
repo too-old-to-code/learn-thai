@@ -27,8 +27,8 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_ENV
       - run: terraform init
-      - run: terraform workspace select $BRANCH_NAME || terraform workspace new $BRANCH_NAME
-      - run: terraform apply -var="branch_name=$BRANCH_NAME" -auto-approve
+      - run: terraform workspace select env.BRANCH_NAME || terraform workspace new env.BRANCH_NAME
+      - run: terraform apply -var="branch_name=env.BRANCH_NAME" -auto-approve
 
   # This workflow contains a single job called "build"
   build-and-publish:
