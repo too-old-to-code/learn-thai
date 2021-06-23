@@ -3,7 +3,7 @@
 # Set some variables
 SOURCE_DIR="./client"
 GIT_COMMIT_HASH=`git rev-parse --short HEAD`
-BUCKET_NAME='learn-thai'
+BUCKET_NAME='learn-thai-12345'
 TARGET_DIR="$BUCKET_NAME/$GIT_COMMIT_HASH/learn-thai-alphabet"
 echo "$TARGET_DIR"
 
