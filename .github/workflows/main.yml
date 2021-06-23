@@ -26,6 +26,7 @@ jobs:
       BRANCH_NAME: ${{ github.head_ref }}
     steps:
       - uses: actions/checkout@v2
+      - run: echo "${{ env.BRANCH_NAME }}"
       - run: terraform init
       - run: terraform workspace select ${{ env.BRANCH_NAME }} || terraform workspace new ${{ env.BRANCH_NAME }}
       - run: terraform apply -var="branch_name=${{ env.BRANCH_NAME }}" -auto-approve
